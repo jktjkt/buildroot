@@ -1,0 +1,30 @@
+From ce591980428ab09b0e72e6155963a60e037dd2fc Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Kundr=C3=A1t?= <jan.kundrat@cesnet.cz>
+Date: Fri, 17 Mar 2017 20:13:38 +0100
+Subject: [PATCH] hack: Do not install YANG modules at build time
+
+---
+ CMakeLists.txt | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index cd3246a..ef2202c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -184,12 +184,7 @@ add_subdirectory(src)
+ 
+ # execute command at the install time
+ macro(EXEC_AT_INSTALL_TIME CMD)
+-    install(CODE "message(STATUS \"Exec: ${CMD}\")
+-        execute_process(COMMAND ${CMD} OUTPUT_QUIET RESULT_VARIABLE ret)
+-        if (NOT \${ret} EQUAL 0)
+-          message(FATAL_ERROR \"Error: \${ret}\")
+-        endif()"
+-        )
++    install(CODE "message(STATUS \"__AT_INSTALL_TIME__ ${CMD}\")")
+ endmacro(EXEC_AT_INSTALL_TIME)
+ 
+ macro(INSTALL_YANG MODULE_NAME REVISION PERMISSIONS)
+-- 
+2.10.2
+
