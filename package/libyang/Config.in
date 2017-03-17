@@ -1,0 +1,9 @@
+config BR2_PACKAGE_LIBYANG
+	bool "libyang"
+	select BR2_PACKAGE_PCRE
+	select BR2_PACKAGE_PCRE_UCP
+	help
+	  LibYANG processes YIN and YANG files. These files are used in
+	  NETCONF, an Internet protocol for remote control of network devices.
+
+	  https://github.com/CESNET/libyang
