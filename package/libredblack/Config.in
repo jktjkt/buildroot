@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LIBREDBLACK
+	bool "libredblack"
+	help
+	  RedBlack Balanced Tree Searching and Sorting Library
+
+	  http://libredblack.sourceforge.net/
