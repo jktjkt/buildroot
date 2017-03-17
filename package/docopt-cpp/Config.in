@@ -1,0 +1,7 @@
+config BR2_PACKAGE_DOCOPT_CPP
+	bool "docopt-cpp"
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  C++11 port of docopt, a CLI option parser
+
+	  https://github.com/docopt/docopt.cpp
