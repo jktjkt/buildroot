@@ -1,0 +1,12 @@
+config BR2_PACKAGE_LIBNETCONF2
+	bool "libnetconf2"
+	select BR2_PACKAGE_LIBYANG
+	select BR2_PACKAGE_LIBSSH
+	select BR2_PACKAGE_LIBSSH_SERVER
+	select BR2_PACKAGE_OPENSSL
+	help
+	  A NETCONF library in C intended for building NETCONF clients
+	  and servers. NETCONF is the NETwork CONFiguration protocol
+	  introduced by IETF.
+
+	  https://github.com/CESNET/libnetconf2
