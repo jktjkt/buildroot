@@ -1,0 +1,7 @@
+config BR2_PACKAGE_SPDLOG
+	bool "spdlog"
+	depends on BR2_INSTALL_LIBSTDCPP
+	help
+	  Very fast, header only, C++ logging library. Needs a C++14 compiler.
+
+	  https://github.com/gabime/spdlog

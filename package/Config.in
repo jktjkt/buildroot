@@ -1184,6 +1184,7 @@ menu "Logging"
 	source "package/log4cplus/Config.in"
 	source "package/log4cpp/Config.in"
 	source "package/log4cxx/Config.in"
+	source "package/spdlog/Config.in"
 	source "package/zlog/Config.in"
 endmenu
 

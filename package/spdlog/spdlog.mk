@@ -1,0 +1,9 @@
+SPDLOG_VERSION = master
+SPDLOG_SITE = https://github.com/gabime/spdlog.git
+SPDLOG_SITE_METHOD = git
+SPDLOG_INSTALL_STAGING = YES
+SPDLOG_INSTALL_TARGET = NO
+SPDLOG_LICENSE = MIT
+SPDLOG_LICENSE_FILES = LICENSE
+
+$(eval $(cmake-package))
