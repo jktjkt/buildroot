@@ -1,0 +1,9 @@
+LIBYANG_VERSION = devel
+LIBYANG_SITE = https://github.com/CESNET/libyang.git
+LIBYANG_SITE_METHOD = git
+LIBYANG_INSTALL_STAGING = YES
+LIBYANG_LICENSE = BSD-3c
+LIBYANG_LICENSE_FILES = LICENSE
+LIBYANG_DEPENDENCIES = pcre host-pkgconf
+
+$(eval $(cmake-package))

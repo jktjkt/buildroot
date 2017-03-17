@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LIBYANG
+	bool "libyang"
+	select BR2_PACKAGE_PCRE
+	select BR2_PACKAGE_PCRE_UCP
+	help
+	  YANG data modeling language library
+
+	  https://github.com/CESNET/libyang
