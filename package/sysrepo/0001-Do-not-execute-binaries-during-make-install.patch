@@ -1,0 +1,38 @@
+From 9f9f554c203939b391048e0bb24a6067031cc224 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Kundr=C3=A1t?= <jan.kundrat@cesnet.cz>
+Date: Wed, 22 Mar 2017 01:14:05 +0100
+Subject: [PATCH] Do not execute binaries during `make install`
+
+---
+ CMakeLists.txt | 8 --------
+ 1 file changed, 8 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index cd3246a..8891bbb 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -265,11 +265,6 @@ set(INTERNAL_YANGS
+ )
+ install (FILES ${INTERNAL_YANGS} DESTINATION ${INTERNAL_SCHEMA_SEARCH_DIR})
+ 
+-# install NACM YANG module
+-if(ENABLE_NACM)
+-    INSTALL_YANG("ietf-netconf-acm" "@2012-02-22" "644")
+-endif(ENABLE_NACM)
+-
+ find_package(PkgConfig QUIET)
+ if(PKG_CONFIG_FOUND)
+     # generate and install pkg-config file
+@@ -291,9 +286,6 @@ if(WITH_SYSTEMD)
+         FILES_MATCHING PATTERN "*.service")
+ endif()
+ 
+-INSTALL_YANG("ietf-netconf-notifications" "" "666")
+-INSTALL_YANG("nc-notifications" "" "666")
+-
+ if(GEN_LANGUAGE_BINDINGS)
+     add_subdirectory(swig)
+ endif()
+-- 
+2.10.2
+

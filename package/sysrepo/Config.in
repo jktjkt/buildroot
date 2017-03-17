@@ -1,0 +1,20 @@
+config BR2_PACKAGE_SYSREPO
+	bool "sysrepo"
+	select BR2_PACKAGE_LIBEV
+	select BR2_PACKAGE_LIBREDBLACK
+	select BR2_PACKAGE_LIBYANG
+	select BR2_PACKAGE_PROTOBUF_C
+	depends on !BR2_STATIC_LIBS
+	depends on BR2_TOOLCHAIN_HAS_THREADS
+	depends on BR2_INSTALL_LIBSTDCPP
+
+	help
+	  sysrepo is a YANG-based configuration and operational state data
+	  store. It is used by Netopeer2, a NETCONF server. The NETCONF
+	  Internet protocol is used for remote management of network devices.
+
+	  http://www.sysrepo.org/
+
+comment "needs a toolchain w/ threads, C++, dynamic library"
+	depends on BR2_STATIC_LIBS || !BR2_TOOLCHAIN_HAS_THREADS \
+		|| !BR2_INSTALL_LIBSTDCPP
