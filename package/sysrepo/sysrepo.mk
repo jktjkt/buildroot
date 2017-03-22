@@ -1,5 +1,5 @@
-SYSREPO_VERSION = devel
-SYSREPO_SITE = https://github.com/sysrepo/sysrepo.git
+SYSREPO_VERSION = wip-notifications
+SYSREPO_SITE = https://github.com/jktjkt/sysrepo.git
 SYSREPO_SITE_METHOD = git
 SYSREPO_INSTALL_STAGING = YES
 SYSREPO_LICENSE = Apache-2.0
